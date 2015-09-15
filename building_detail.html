@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Color Admin | Tabs & Accordions</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="assets/css/animate.min.css" rel="stylesheet" />
+	<link href="assets/css/style.min.css" rel="stylesheet" />
+	<link href="assets/css/admin.css" rel="stylesheet" />
+	<link href="assets/css/style-responsive.min.css" rel="stylesheet" />
+	<link href="assets/css/theme/default.css" rel="stylesheet" id="theme" />
+	<link href="assets/css/theme/red.css" rel="stylesheet" id="theme" />
+	<link href="assets/css/components.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/plugins.css" rel="stylesheet" type="text/css">
+	<!-- ================== END BASE CSS STYLE ================== -->
+	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+	<link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+	<link href="assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+	<link href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
+	<link href="assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+	<!-- ================== END PAGE LEVEL STYLE ================== -->
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/plugins/pace/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+</head>
+<body>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed page-content-full-height">
+		<!-- begin #header -->
+		<div id="header" class="header navbar navbar-default navbar-fixed-top">
+			<!-- begin container-fluid -->
+			<div class="container-fluid">
+				<!-- begin mobile sidebar expand / collapse button -->
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> Rockbund Admin</a>
+					<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- end mobile sidebar expand / collapse button -->
+				
+				<!-- begin header navigation right -->
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown navbar-user">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="assets/img/user-12.jpg" alt="" /> 
+							<span class="hidden-xs">Administrator</span> <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu animated fadeInLeft">
+							<li><a href="javascript:;">Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- end header navigation right -->
+			</div>
+			<!-- end container-fluid -->
+		</div>
+		<!-- end #header -->
+		
+		<!-- begin #sidebar -->
+		<div id="sidebar" class="sidebar">
+			<!-- begin sidebar scrollbar -->
+			<div data-scrollbar="true" data-height="100%">
+				<!-- begin sidebar nav -->
+				<ul class="nav">
+					<li class="nav-header">Navigation</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+							<b class="caret pull-right"></b>
+							<i class="fa fa-book"></i> 
+							<span>Case</span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="case_list.html">Case List</a></li>
+							<li><a href="case_detail.html">New Case</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+							<b class="caret pull-right"></b>
+							<i class="fa fa-microphone"></i> 
+							<span>Talk</span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="talk_list.html">Talk List</a></li>
+							<li><a href="talk_detail.html">New Talk</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+							<b class="caret pull-right"></b>
+							<i class="fa fa-users"></i> 
+							<span>Clients</span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="client_list.html">Clients List</a></li>
+							<li><a href="client_detail.html">New Client</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+							<b class="caret pull-right"></b>
+							<i class="fa fa-coffee"></i> 
+							<span>Insight</span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="insight_list.html">Insight List</a></li>
+							<li><a href="insight_detail.html">New Insight</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+							<b class="caret pull-right"></b>
+							<i class="fa fa-envelope"></i> 
+							<span>Newsletter</span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="newsletter_list.html">Newsletter Archive</a></li>
+							<li><a href="newsletter_detail.html">New Newsletter</a></li>
+						</ul>
+					</li>
+					<li class="has-sub active">
+						<a href="javascript:;">
+							<b class="caret pull-right"></b>
+							<i class="fa fa-newspaper-o"></i> 
+							<span>News</span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="news_list.html">News List</a></li>
+							<li class="active"><a href="news_detail.html">New News</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="service_list.html">
+							<i class="fa fa-globe"></i> 
+							<span>Service</span>
+						</a>
+					</li>
+					<li>
+						<a href="page_list.html">
+							<i class="fa fa-sitemap"></i> 
+							<span>Page</span>
+						</a>
+					</li>
+					<li>
+						<a href="team_list.html">
+							<i class="fa fa-institution"></i> 
+							<span>Team</span>
+						</a>
+					</li>
+			        <!-- begin sidebar minify button -->
+					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+			        <!-- end sidebar minify button -->
+				</ul>
+				<!-- end sidebar nav -->
+			</div>
+			<!-- end sidebar scrollbar -->
+		</div>
+		<div class="sidebar-bg"></div>
+		<!-- end #sidebar -->
+		
+		<!-- begin #content -->
+		<div id="content" class="content content-full-width">
+			<div class="vertical-box">
+				<div class="vertical-box-row">
+					<div class="vertical-box-cell">
+						<div class="vertical-box-inner-cell">
+							<div data-scrollbar="true" data-height="100%" class="wrapper-detail no_drag">
+								<a class="pull-right btn btn-primary preview" href="http://www.google.com" target="_blank">
+									<i class="fa fa-eye m-r-5"></i>CN
+								</a>
+								<a class="pull-right btn btn-primary m-r-5 preview" href="http://www.google.com" target="_blank">
+									<i class="fa fa-eye m-r-5"></i>EN
+								</a>
+								<a class="pull-right btn btn-primary preview m-r-5" href="#edit-seo" data-toggle="modal">
+									<i class="fa fa-building-o m-r-5"></i>SEO
+								</a>
+								<!-- begin page-header -->
+								<h1 class="page-header">Building Detail <!-- <small>header small text goes here...</small> --></h1>
+								<!-- end page-header -->
+								
+								<!-- begin row -->
+								<div class="row">
+									<div class="col-md-4">
+
+					                    <!-- basic infomation -->
+					                    <div class="panel panel-inverse">
+					                        <div class="panel-heading">
+					                            <h4 class="panel-title">Basics</h4>
+					                        </div>
+					                        <div class="panel-body">
+					                            <form>
+					                            	<div class="form-group">
+														<label class="control-label">Main Logo</label>
+														<div class="uploadImg">
+															<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280">
+				                                    			<i class="fa fa-times"></i>
+				                                    		</a>
+															<div class="bg"><img src="images/cms/01.jpg"></div>
+															<div class="editBtn triple">
+																<strong>300×400</strong>
+																<span class="file_uploadImg"></span>
+																<a href="#image-crop" class="btn btn-inverse btn-block btn-small" data-toggle="modal"><i class="fa fa-crop"></i> 裁切</a>
+																<a href="#fill-color" class="btn btn-inverse btn-block btn-small" data-toggle="modal"><i class="fa fa-eyedropper"></i> 填色</a>
+															</div>
+														</div>
+													</div>
+					                                <div class="form-group">
+														<label class="control-label">Key Visual</label>
+														<div class="uploadImg">
+															<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280">
+				                                    			<i class="fa fa-times"></i>
+				                                    		</a>
+															<div class="bg"><img src="images/cms/01.jpg"></div>
+															<div class="editBtn">
+																<strong>870x1160</strong>
+																<span class="file_uploadImg"></span>
+																<a href="#image-crop" class="btn btn-inverse btn-block btn-small" data-toggle="modal"><i class="fa fa-crop"></i> 裁切</a>
+															</div>
+														</div>
+													</div>
+					                            	<div class="form-group">
+					                                    <label class="control-label">Name (CN)</label>
+					                                    <input type="text" class="form-control">
+					                                </div>
+					                                <div class="form-group">
+					                                    <label class="control-label">Name (EN)</label>
+					                                    <input type="text" class="form-control">
+					                                </div>
+					                                <div class="form-group">
+					                                    <label class="control-label">Type</label>
+					                                    <div class="tagBox">
+					                                    	<label class="checkbox-inline">
+					                                            <input type="radio" name="type" value="">
+					                                            Retail
+					                                        </label>
+					                                        <label class="checkbox-inline">
+					                                            <input type="radio" name="type" value="">
+					                                            Art
+					                                        </label>
+					                                        <label class="checkbox-inline">
+					                                            <input type="radio" name="type" value="">
+					                                            Dress
+					                                        </label>
+					                                    </div>
+					                                </div>
+					                                <div class="form-group">
+					                                    <label class="control-label">Brief Description (EN)</label>
+					                                    <textarea class="textarea form-control"></textarea>
+					                                </div>
+					                                <div class="form-group">
+					                                    <label class="control-label">Brief Description (CN)</label>
+					                                    <textarea class="textarea form-control"></textarea>
+					                                </div>
+					                            </form>
+					                        </div>
+					                    </div>
+
+					                    <!-- related items -->
+					                    <div class="panel panel-inverse">
+					                        <div class="panel-heading">
+					                            <h4 class="panel-title">Related</h4>
+					                        </div>
+					                        <div class="panel-body">
+					                            <form>
+					                                <div class="form-group">
+					                                    <label class="control-label">Brand ID</label>
+					                                    <div class="searchBox" style="z-index: 900;">
+															<select class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
+					                                            <option value="" selected>Select an Event</option>
+					                                            <option value="AF">Afghanistan</option>
+					                                            <option value="AL">Albania</option>
+					                                            <option value="DZ">Algeria</option>
+					                                            <option value="AS">American Samoa</option>
+					                                            <option value="AD">Andorra</option>
+					                                            <option value="AO">Angola</option>
+					                                            <option value="AI">Anguilla</option>
+					                                            <option value="AQ">Antarctica</option>
+					                                            <option value="AG">Antigua and Barbuda</option>
+					                                        </select>
+														</div>
+					                                    <div class="tagBox">
+					                                    	<span class="label label-default">China<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280"><i class="fa fa-times"></i></a></span>
+					                                        <span class="label label-default">Shanghai<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280"><i class="fa fa-times"></i></a></span>
+					                                        <!-- <a href="#add-related-item" data-toggle="modal" type="button" class="add btn btn-primary"><i class="fa fa-plus"></i></a> -->
+					                                    </div>
+					                                </div>
+					                                <div class="form-group">
+					                                    <label class="control-label">Events ID</label>
+					                                    <div class="searchBox" style="z-index: 800;">
+															<select class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
+					                                            <option value="" selected>Select a News</option>
+					                                            <option value="AF">Afghanistan</option>
+					                                            <option value="AL">Albania</option>
+					                                            <option value="DZ">Algeria</option>
+					                                            <option value="AS">American Samoa</option>
+					                                            <option value="AD">Andorra</option>
+					                                            <option value="AO">Angola</option>
+					                                            <option value="AI">Anguilla</option>
+					                                            <option value="AQ">Antarctica</option>
+					                                            <option value="AG">Antigua and Barbuda</option>
+					                                        </select>
+														</div>
+					                                    <div class="tagBox">
+					                                    	<span class="label label-default">China<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280"><i class="fa fa-times"></i></a></span>
+					                                        <span class="label label-default">Shanghai<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280"><i class="fa fa-times"></i></a></span>
+					                                        <!-- <a href="#add-related-item" data-toggle="modal" type="button" class="add btn btn-primary"><i class="fa fa-plus"></i></a> -->
+					                                    </div>
+					                                </div>
+					                                <div class="form-group">
+					                                    <label class="control-label">News ID</label>
+					                                    <div class="searchBox" style="z-index: 800;">
+															<select class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
+					                                            <option value="" selected>Select a News</option>
+					                                            <option value="AF">Afghanistan</option>
+					                                            <option value="AL">Albania</option>
+					                                            <option value="DZ">Algeria</option>
+					                                            <option value="AS">American Samoa</option>
+					                                            <option value="AD">Andorra</option>
+					                                            <option value="AO">Angola</option>
+					                                            <option value="AI">Anguilla</option>
+					                                            <option value="AQ">Antarctica</option>
+					                                            <option value="AG">Antigua and Barbuda</option>
+					                                        </select>
+														</div>
+					                                    <div class="tagBox">
+					                                    	<span class="label label-default">China<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280"><i class="fa fa-times"></i></a></span>
+					                                        <span class="label label-default">Shanghai<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280"><i class="fa fa-times"></i></a></span>
+					                                        <!-- <a href="#add-related-item" data-toggle="modal" type="button" class="add btn btn-primary"><i class="fa fa-plus"></i></a> -->
+					                                    </div>
+					                                </div>
+					                            </form>
+					                        </div>
+					                    </div>
+									</div>
+
+								    <!-- begin col-8 -->
+								    <div class="col-md-8">
+								    	<ul class="nav nav-tabs">
+											<li class="active"><a href="#default-tab-1" data-toggle="tab">Brand Description (EN)</a></li>
+											<li class=""><a href="#default-tab-2" data-toggle="tab">Brand Description (CN)</a></li>
+										</ul>
+										<div class="tab-content">
+											<div class="tab-pane fade active in" id="default-tab-1">
+												<div class="cmsPage" style="max-width: 640px; margin: 0 auto;">
+													<div class="cmsInsertBox">
+														<div class="solid"></div>
+														<div class="editButtonList">
+															<div class="btn-group">
+																<button class="btn btn-white"><i class="fa fa-pencil"></i> Text</button>
+																<a class="btn btn-white" href="#edit-image-text" data-toggle="modal"><i class="fa fa-picture-o"></i> Text&amp;Img</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-photo"></i> Image</a>
+																<a class="btn btn-white" href="#edit-gallery" data-toggle="modal"><i class="fa fa-photo"></i> Slide</a>
+																<a class="btn btn-white" href="#edit-link" data-toggle="modal"><i class="fa fa-link"></i> Link</a>
+																<button class="btn btn-white"><i class="fa fa-code"></i> Code</button>
+															</div>
+														</div>
+													</div>
+													<div class="cmsMainBox">
+														<div class="cmsHoverCon">
+															<div class="btn-group">
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-edit"></i>Edit Code</a>
+																<a class="btn btn-white" href="#sort-cms" data-toggle="modal"><i class="fa fa-arrow-circle-up"></i>Sort</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-trash"></i>Delete</a>
+															</div>
+														</div>
+														<div class="cmsMainBoxCon" id="editable" contenteditable="true">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam esse ex amet! Mollitia natus sint laudantium vel rem quasi delectus eveniet, sit tempore vitae temporibus, nisi ab, voluptatem, suscipit.</p>
+														</div>
+													</div>
+													<div class="cmsInsertBox">
+														<div class="solid"></div>
+														<div class="editButtonList">
+															<div class="btn-group">
+																<button class="btn btn-white"><i class="fa fa-pencil"></i> Text</button>
+																<a class="btn btn-white" href="#edit-image-text" data-toggle="modal"><i class="fa fa-picture-o"></i> Text&amp;Img</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-photo"></i> Image</a>
+																<a class="btn btn-white" href="#edit-gallery" data-toggle="modal"><i class="fa fa-photo"></i> Slide</a>
+																<a class="btn btn-white" href="#edit-link" data-toggle="modal"><i class="fa fa-link"></i> Link</a>
+																<button class="btn btn-white"><i class="fa fa-code"></i> Code</button>
+															</div>
+														</div>
+													</div>
+													<div class="cmsMainBox">
+														<div class="cmsHoverCon">
+															<div class="btn-group">
+																<a class="btn btn-white" href="#edit-image-text" data-toggle="modal"><i class="fa fa-edit"></i>Edit</a>
+																<a class="btn btn-white" href="#sort-cms" data-toggle="modal"><i class="fa fa-arrow-circle-up"></i>Sort</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-trash"></i>Delete</a>
+															</div>
+														</div>
+														<div class="cmsMainBoxCon" id="editable" contenteditable="true">
+															<div class="fl">
+																<img src="images/w300/01.jpg" alt="">
+																<div class="caption">
+																	Lorem ipsum dolor sit amet
+																</div>
+															</div>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam esse ex amet! Mollitia natus sint laudantium vel rem quasi delectus eveniet, sit tempore vitae temporibus, nisi ab, voluptatem, suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam esse ex amet! Mollitia natus sint laudantium vel rem quasi delectus eveniet, sit tempore vitae temporibus, nisi ab, voluptatem, suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam esse ex amet! Mollitia natus sint laudantium vel rem quasi delectus eveniet, sit tempore vitae temporibus, nisi ab, voluptatem, suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam esse ex amet! Mollitia natus sint laudantium vel rem quasi delectus eveniet, sit tempore vitae temporibus, nisi ab, voluptatem, suscipit.</p>
+														</div>
+													</div>
+													<div class="cmsInsertBox">
+														<div class="solid"></div>
+														<div class="editButtonList">
+															<div class="btn-group">
+																<button class="btn btn-white"><i class="fa fa-pencil"></i> Text</button>
+																<a class="btn btn-white" href="#edit-image-text" data-toggle="modal"><i class="fa fa-picture-o"></i> Text&amp;Img</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-photo"></i> Image</a>
+																<a class="btn btn-white" href="#edit-gallery" data-toggle="modal"><i class="fa fa-photo"></i> Slide</a>
+																<a class="btn btn-white" href="#edit-link" data-toggle="modal"><i class="fa fa-link"></i> Link</a>
+																<button class="btn btn-white"><i class="fa fa-code"></i> Code</button>
+															</div>
+														</div>
+													</div>
+													<div class="cmsMainBox">
+														<div class="cmsHoverCon">
+															<div class="btn-group">
+																<a class="btn btn-white" href="#edit-image-text" data-toggle="modal"><i class="fa fa-edit"></i>Edit</a>
+																<a class="btn btn-white" href="#sort-cms" data-toggle="modal"><i class="fa fa-arrow-circle-up"></i>Sort</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-trash"></i>Delete</a>
+															</div>
+														</div>
+														<div class="cmsMainBoxCon" id="editable" contenteditable="true">
+															<div class="fr">
+																<img src="images/w300/01.jpg" alt="">
+																<div class="caption">
+																	Lorem ipsum dolor sit amet
+																</div>
+															</div>
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam esse ex amet! Mollitia natus sint laudantium vel rem quasi delectus eveniet, sit tempore vitae temporibus, nisi ab, voluptatem, suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam esse ex amet! Mollitia natus sint laudantium vel rem quasi delectus eveniet, sit tempore vitae temporibus, nisi ab, voluptatem, suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam esse ex amet! Mollitia natus sint laudantium vel rem quasi delectus eveniet, sit tempore vitae temporibus, nisi ab, voluptatem, suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam esse ex amet! Mollitia natus sint laudantium vel rem quasi delectus eveniet, sit tempore vitae temporibus, nisi ab, voluptatem, suscipit.</p>
+														</div>
+													</div>
+													<div class="cmsInsertBox">
+														<div class="solid"></div>
+														<div class="editButtonList">
+															<div class="btn-group">
+																<button class="btn btn-white"><i class="fa fa-pencil"></i> Text</button>
+																<a class="btn btn-white" href="#edit-image-text" data-toggle="modal"><i class="fa fa-picture-o"></i> Text&amp;Img</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-photo"></i> Image</a>
+																<a class="btn btn-white" href="#edit-gallery" data-toggle="modal"><i class="fa fa-photo"></i> Slide</a>
+																<a class="btn btn-white" href="#edit-link" data-toggle="modal"><i class="fa fa-link"></i> Link</a>
+																<button class="btn btn-white"><i class="fa fa-code"></i> Code</button>
+															</div>
+														</div>
+													</div>
+													<div class="cmsMainBox">
+														<div class="cmsHoverCon">
+															<div class="editButtonList">
+																<div class="btn-group">
+																	<a class="btn btn-white" href="javascript:;"><i class="fa fa-edit"></i>Edit Code</a>
+																	<a class="btn btn-white" href="#sort-cms" data-toggle="modal"><i class="fa fa-arrow-circle-up"></i>Sort</a>
+																	<a class="btn btn-white" href="javascript:;"><i class="fa fa-trash"></i>Delete</a>
+																</div>
+															</div>
+														</div>
+														<div class="htmlBox">
+															<textarea>Organizer Office BolognaFiere China Ltd. Add: Rm. 302,Building 11, CREA-INFINITY, No. 600 North Shanxi Road Shanghai, China 200041 Tel: +86 21 61907310 Fax: +86 21 61907313 Exhibitor Relations Contact Details: Sharon Pan</textarea>
+														</div>
+													</div>
+													<div class="cmsInsertBox">
+														<div class="solid"></div>
+														<div class="editButtonList">
+															<div class="btn-group">
+																<button class="btn btn-white"><i class="fa fa-pencil"></i> Text</button>
+																<a class="btn btn-white" href="#edit-image-text" data-toggle="modal"><i class="fa fa-picture-o"></i> Text&amp;Img</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-photo"></i> Image</a>
+																<a class="btn btn-white" href="#edit-gallery" data-toggle="modal"><i class="fa fa-photo"></i> Slide</a>
+																<a class="btn btn-white" href="#edit-link" data-toggle="modal"><i class="fa fa-link"></i> Link</a>
+																<button class="btn btn-white"><i class="fa fa-code"></i> Code</button>
+															</div>
+														</div>
+													</div>
+													<div class="cmsMainBox">
+														<div class="cmsHoverCon">
+															<div class="btn-group">
+																<a class="btn btn-white" href="#edit-gallery" data-toggle="modal"><i class="fa fa-edit"></i>Edit</a>
+																<a class="btn btn-white" href="#sort-cms" data-toggle="modal"><i class="fa fa-arrow-circle-up"></i>Sort</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-trash"></i>Delete</a>
+															</div>
+														</div>
+														<div class="cmsMainBoxCon">
+															<div class="cms-gallery">
+																<div>
+																	<div class="pic">
+																		<img src="images/980x450/02.jpg" alt="">
+																	</div>
+																	<p class="caption">
+																		Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+																	</p>
+																</div>
+																<div>
+																	<div class="pic">
+																		<img src="images/cms/01.jpg" alt="">
+																	</div>
+																	<p class="caption">
+																		Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+																	</p>
+																</div>
+																<div>
+																	<div class="pic">
+																		<img src="images/cms/03.jpg" alt="">
+																	</div>
+																	<p class="caption">
+																		Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+																	</p>
+																</div>
+																<div>
+																	<div class="pic">
+																		<img src="images/cms/02.jpg" alt="">
+																	</div>
+																	<p class="caption">
+																		Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+																	</p>
+																</div>
+																<div>
+																	<div class="pic">
+																		<img src="images/cms/01.jpg" alt="">
+																	</div>
+																	<p class="caption">
+																		Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+																	</p>
+																</div>
+																<div>
+																	<div class="pic">
+																		<img src="images/cms/03.jpg" alt="">
+																	</div>
+																	<p class="caption">
+																		Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+																	</p>
+																</div>
+																<div>
+																	<div class="pic">
+																		<img src="images/cms/02.jpg" alt="">
+																	</div>
+																	<p class="caption">
+																		Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+																	</p>
+																</div>
+																<div>
+																	<div class="pic">
+																		<img src="images/cms/01.jpg" alt="">
+																	</div>
+																	<p class="caption">
+																		Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="cmsMainBox">
+														<div class="cmsHoverCon">
+															<div class="btn-group">
+																<a class="btn btn-white" href="#edit-link" data-toggle="modal"><i class="fa fa-edit"></i>Edit</a>
+																<a class="btn btn-white" href="#sort-cms" data-toggle="modal"><i class="fa fa-arrow-circle-up"></i>Sort</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-trash"></i>Delete</a>
+															</div>
+														</div>
+							                            <div class="cmsMainBoxCon">
+							                                <div class="link">
+							                                    <a href="javascript:;">2014 ART021 Art Fair Official Site</a>
+							                                    <a href="javascript:;" class="file">Document Download</a>
+							                                    <a href="javascript:;" class="mail">Contact</a>
+							                                </div>
+							                            </div>
+							                        </div>
+												</div>
+											</div>
+											<!-- 英文CMS -->
+											<div class="tab-pane fade" id="default-tab-2">
+												<div class="cmsPage cn" style="max-width: 640px; margin: 0 auto;">
+													<div class="cmsInsertBox">
+														<div class="solid"></div>
+														<div class="editButtonList">
+															<div class="btn-group">
+																<button class="btn btn-white"><i class="fa fa-pencil"></i> Text</button>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-photo"></i> Image</a>
+																<button class="btn btn-white"><i class="fa fa-code"></i> Code</button>
+															</div>
+														</div>
+													</div>
+													<div class="cmsMainBox">
+														<div class="cmsHoverCon">
+															<div class="btn-group">
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-edit"></i>Edit Code</a>
+																<a class="btn btn-white" href="#sort-cms" data-toggle="modal"><i class="fa fa-arrow-circle-up"></i>Sort</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-trash"></i>Delete</a>
+															</div>
+														</div>
+														<div class="cmsMainBoxCon" id="editable" contenteditable="true">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam esse ex amet! Mollitia natus sint laudantium vel rem quasi delectus eveniet, sit tempore vitae temporibus, nisi ab, voluptatem, suscipit.</p>
+														</div>
+													</div>
+													<div class="cmsInsertBox">
+														<div class="solid"></div>
+														<div class="editButtonList">
+															<div class="btn-group">
+																<button class="btn btn-white"><i class="fa fa-pencil"></i> Text</button>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-photo"></i> Image</a>
+																<button class="btn btn-white"><i class="fa fa-code"></i> Code</button>
+															</div>
+														</div>
+													</div>
+													<div class="cmsMainBox">
+														<div class="cmsHoverCon">
+															<div class="editButtonList">
+																<div class="btn-group">
+																	<a class="btn btn-white" href="javascript:;"><i class="fa fa-edit"></i>Edit Code</a>
+																	<a class="btn btn-white" href="#sort-cms" data-toggle="modal"><i class="fa fa-arrow-circle-up"></i>Sort</a>
+																	<a class="btn btn-white" href="javascript:;"><i class="fa fa-trash"></i>Delete</a>
+																</div>
+															</div>
+														</div>
+														<div class="htmlBox">
+															<textarea>Organizer Office BolognaFiere China Ltd. Add: Rm. 302,Building 11, CREA-INFINITY, No. 600 North Shanxi Road Shanghai, China 200041 Tel: +86 21 61907310 Fax: +86 21 61907313 Exhibitor Relations Contact Details: Sharon Pan</textarea>
+														</div>
+													</div>
+													<div class="cmsInsertBox">
+														<div class="solid"></div>
+														<div class="editButtonList">
+															<div class="btn-group">
+																<button class="btn btn-white"><i class="fa fa-pencil"></i> Text</button>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-photo"></i> Image</a>
+																<button class="btn btn-white"><i class="fa fa-code"></i> Code</button>
+															</div>
+														</div>
+													</div>
+													<div class="cmsMainBox">
+														<div class="cmsHoverCon">
+															<div class="btn-group">
+																<a class="btn btn-white" href="#edit-gallery" data-toggle="modal"><i class="fa fa-edit"></i>Edit</a>
+																<a class="btn btn-white" href="#sort-cms" data-toggle="modal"><i class="fa fa-arrow-circle-up"></i>Sort</a>
+																<a class="btn btn-white" href="javascript:;"><i class="fa fa-trash"></i>Delete</a>
+															</div>
+														</div>
+														<div class="cmsMainBoxCon">
+															<img src="images/cms/02.jpg" alt="">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+								    </div>
+								    <!-- end col-8 -->
+								</div>
+								<!-- end row -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper bg-silver-lighter text-center">
+					<button class="btn btn-primary m-r-5 p-l-15 p-r-15">Save</button>
+					<!-- <button class="btn btn-white m-r-5">发布</button>
+					<button class="btn btn-default m-r-5">Cancel发布</button> -->
+					<a href="#modal-alert" class="btn btn-danger" data-toggle="modal">Delete</a>
+					<div class="m-r-5 release-switchery">
+						<span class="m-r-5 m-l-5">Release:</span>
+						<input type="checkbox" data-render="switchery" data-theme="blue" checked="" data-switchery="true" style="display: none;">
+                        <span class="text-muted m-l-5 m-r-5">CN</span>
+                        <input type="checkbox" data-render="switchery" data-theme="blue" checked="" data-switchery="true" style="display: none;">
+                        <span class="text-muted m-l-5">EN</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end #content -->
+
+		<!-- #modal-dialog -->
+		<div class="modal fade" id="add-related-item">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">Add Related Items</h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+                            <label class="control-label">Type</label>
+                            <select class="form-control">
+                                <option>What Clents Say</option>
+                                <option>Recommended Case Studies of Same Service</option>
+                                <option>Insights</option>
+                                <option>News</option>
+                                <option>Publication</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+							<div class="searchBox">
+								<input type="text" class="form-control" placeholder="Tag Name">
+								<div class="resultBox" style="display: none;">
+									<ul>
+										<li>Africa</li>
+										<li>America</li>
+										<li>Angola</li>
+										<li>Australia</li>
+										<li>Africa</li>
+										<li>America</li>
+										<li>Angola</li>
+										<li>Australia</li>
+										<li>Africa</li>
+										<li>America</li>
+										<li>Angola</li>
+										<li>Australia</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Cancel</a>
+						<a href="javascript:;" class="btn btn-sm btn-success">Save</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-without-animation -->
+
+		<div class="modal modal-message fade" id="image-crop" style="padding:0!important;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">裁剪图片</h4>
+					</div>
+					<div class="modal-body p-t-0">
+						<iframe width="100%" class="pop-crop" src="pop_crop.html" frameborder="0" scrolling="no"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal-message fade" id="fill-color" style="padding:0!important;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">裁剪图片</h4>
+					</div>
+					<div class="modal-body p-t-0">
+						<iframe width="100%" class="pop-crop" src="fill_color.html" frameborder="0" scrolling="no"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="sort-cms">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">Sort Page</h4>
+					</div>
+					<div class="modal-body movablePlateY">
+						<ul class="sort-style">
+							<li>
+								<div class="tit"><i class="fa fa-pencil"></i> Text</div>
+								<div class="info">
+									<p>PLYMOUTH, MICH. (Feb. 17, 2014) – Johnson Controls, a global multi-industrial company with established core businesses in the automotive, building and energy storage industries, has opened a new manufacturing plant in Queretaro, Mexico. The plant will produce molded polyurethane foam for automotive seats.</p>
+									<p>Construction of the new facility began in March 2013 and was completed in October 2013. Production began at the plant this month. “Johnson Controls is strongly committed to producing world-class automotive seating systems and is proud to bring this new facility to Queretaro,” said Brian Cooke, vice president and general manager for Johnson Controls’ foam product group. “We are pleased to become a part of and support the Queretaro community.”</p>
+								</div>
+							</li>
+							<li>
+								<div class="tit"><i class="fa fa-photo"></i> Gallery</div>
+								<div class="info"><img src="images/cms/01.jpg" alt=""></div>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Cancel</a>
+						<a href="javascript:;" class="btn btn-sm btn-primary" data-dismiss="modal">Confirm</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade sort" id="edit-gallery">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title p-b-10">
+							Edit Gallery
+							<button class="btn btn-primary pull-right m-r-20">Add Image</button>
+						</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="sort-style sort-gallery">
+							<li>
+								<div class="tit">
+									<div class="uploadImg">
+										<div class="bg"><img src="images/cms/01.jpg"></div>
+										<div class="editBtn">
+											<span class="file_uploadImg"></span>
+											<a href="javascript:;" class="btn btn-primary btn-block btn-small edit"><i class="fa fa-edit"></i> 编辑</a>
+											<a href="#image-crop" class="btn btn-danger btn-block btn-small" data-toggle="modal"><i class="fa fa-trash-o"></i> 删除</a>
+											<i class="fa fa-arrows"></i>
+										</div>
+									</div>
+								</div>
+								<div class="info">
+									<textarea>PLYMOUTH, MICH. (Feb. 17, 2014) – Johnson Controls, a global multi-industrial company with established core businesses in the automotive, building and energy storage industries, has opened a new manufacturing plant in Queretaro, Mexico. </textarea>
+									<button class="btn btn-primary pull-right save">Save</button>
+									<button class="btn btn-danger pull-right cancel m-r-10">Cancel</button>
+								</div>
+							</li>
+							<li>
+								<div class="tit">
+									<div class="uploadImg">
+										<div class="bg"><img src="images/cms/01.jpg"></div>
+										<div class="editBtn">
+											<span class="file_uploadImg"></span>
+											<a href="javascript:;" class="btn btn-primary btn-block btn-small edit"><i class="fa fa-edit"></i> 编辑</a>
+											<a href="#image-crop" class="btn btn-danger btn-block btn-small" data-toggle="modal"><i class="fa fa-trash-o"></i> 删除</a>
+											<i class="fa fa-arrows"></i>
+										</div>
+									</div>
+								</div>
+								<div class="info">
+									<textarea>PLYMOUTH, MICH. (Feb. 17, 2014) – Johnson Controls, a global multi-industrial company with established core businesses in the automotive, building and energy storage industries, has opened a new manufacturing plant in Queretaro, Mexico. </textarea>
+									<button class="btn btn-primary pull-right save">Save</button>
+									<button class="btn btn-danger pull-right cancel m-r-10">Cancel</button>
+								</div>
+							</li>
+							<li>
+								<div class="tit">
+									<div class="uploadImg">
+										<div class="bg"><img src="images/cms/01.jpg"></div>
+										<div class="editBtn">
+											<span class="file_uploadImg"></span>
+											<a href="javascript:;" class="btn btn-primary btn-block btn-small edit"><i class="fa fa-edit"></i> 编辑</a>
+											<a href="#image-crop" class="btn btn-danger btn-block btn-small" data-toggle="modal"><i class="fa fa-trash-o"></i> 删除</a>
+											<i class="fa fa-arrows"></i>
+										</div>
+									</div>
+								</div>
+								<div class="info">
+									<textarea>PLYMOUTH, MICH. (Feb. 17, 2014) – Johnson Controls, a global multi-industrial company with established core businesses in the automotive, building and energy storage industries, has opened a new manufacturing plant in Queretaro, Mexico. </textarea>
+									<button class="btn btn-primary pull-right save">Save</button>
+									<button class="btn btn-danger pull-right cancel m-r-10">Cancel</button>
+								</div>
+							</li>
+							<li>
+								<div class="tit">
+									<div class="uploadImg">
+										<div class="bg"><img src="images/cms/01.jpg"></div>
+										<div class="editBtn">
+											<span class="file_uploadImg"></span>
+											<a href="javascript:;" class="btn btn-primary btn-block btn-small edit"><i class="fa fa-edit"></i> 编辑</a>
+											<a href="#image-crop" class="btn btn-danger btn-block btn-small" data-toggle="modal"><i class="fa fa-trash-o"></i> 删除</a>
+											<i class="fa fa-arrows"></i>
+										</div>
+									</div>
+								</div>
+								<div class="info">
+									<textarea>PLYMOUTH, MICH. (Feb. 17, 2014) – Johnson Controls, a global multi-industrial company with established core businesses in the automotive, building and energy storage industries, has opened a new manufacturing plant in Queretaro, Mexico. </textarea>
+									<button class="btn btn-primary pull-right save">Save</button>
+									<button class="btn btn-danger pull-right cancel m-r-10">Cancel</button>
+								</div>
+							</li>
+							<li>
+								<div class="tit">
+									<div class="uploadImg">
+										<div class="bg"><img src="images/cms/01.jpg"></div>
+										<div class="editBtn">
+											<span class="file_uploadImg"></span>
+											<a href="#image-crop" class="btn btn-inverse btn-block btn-small" data-toggle="modal"><i class="fa fa-crop"></i> 裁切</a>
+											<a href="javascript:;" class="btn btn-primary btn-block btn-small edit"><i class="fa fa-edit"></i> 编辑</a>
+											<a href="#image-crop" class="btn btn-danger btn-block btn-small" data-toggle="modal"><i class="fa fa-trash-o"></i> 删除</a>
+											<i class="fa fa-arrows"></i>
+										</div>
+									</div>
+								</div>
+								<div class="info">
+									<textarea>PLYMOUTH, MICH. (Feb. 17, 2014) – Johnson Controls, a global multi-industrial company with established core businesses in the automotive, building and energy storage industries, has opened a new manufacturing plant in Queretaro, Mexico. </textarea>
+									<button class="btn btn-primary pull-right save">Save</button>
+									<button class="btn btn-danger pull-right cancel m-r-10">Cancel</button>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<!-- <button class="btn btn-sm btn-primary pull-left" id="sort-gallery-image">Sort Image</button> -->
+						<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Cancel</a>
+						<a href="javascript:;" class="btn btn-sm btn-primary" data-dismiss="modal">Confirm</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="edit-seo">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">Edit SEO</h4>
+					</div>
+					<div class="alert alert-danger fade in">
+						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+						The Title is required.
+					</div>
+					<form class="form-horizontal form-bordered">
+						<div class="form-group has-feedback">
+							<label class="control-label col-md-4">Title (CN)</label>
+							<div class="col-md-7">
+								<span class="lh20">啦啦啦啦啦啦啦</span>
+							</div>
+						</div>
+						<div class="form-group has-feedback">
+							<label class="control-label col-md-4">Title (EN)</label>
+							<div class="col-md-7">
+								<span class="lh20">lalalalalalalal</span>
+							</div>
+						</div>
+						<div class="form-group has-feedback">
+							<label class="control-label col-md-4">Tag (EN)</label>
+							<div class="col-md-7">
+								<div class="input-group m-b-20">
+	                                <input type="text" class="form-control">
+	                                <div class="input-group-btn">
+	                                    <button type="button" class="btn btn-primary">Add</button>
+	                                </div>
+	                            </div>
+	                            <div class="tagBox">
+                                	<span class="label label-default">China<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280"><i class="fa fa-times"></i></a></span>
+                                    <span class="label label-default">Shanghai<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280"><i class="fa fa-times"></i></a></span>
+                                    <span class="label label-default">Beijing</span>
+                                </div>
+							</div>
+						</div>
+						<div class="form-group has-feedback">
+							<label class="control-label col-md-4">Tag (CN)</label>
+							<div class="col-md-7">
+								<div class="input-group m-b-20">
+	                                <input type="text" class="form-control">
+	                                <div class="input-group-btn">
+	                                    <button type="button" class="btn btn-primary">Add</button>
+	                                </div>
+	                            </div>
+	                            <div class="tagBox">
+                                	<span class="label label-default">中国<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280"><i class="fa fa-times"></i></a></span>
+                                    <span class="label label-default">上海<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280"><i class="fa fa-times"></i></a></span>
+                                    <span class="label label-default">北京</span>
+                                </div>
+							</div>
+						</div>
+						<div class="form-group">
+                            <label class="control-label col-md-4">Description (EN)</label>
+                            <div class="col-md-7">
+                            	<textarea class="form-control m-b-10" placeholder="Textarea" rows="3"></textarea>
+                            	<button class="pull-right btn btn-primary">Auto</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Description (CN)</label>
+                            <div class="col-md-7">
+                            	<textarea class="form-control m-b-10" placeholder="Textarea" rows="3"></textarea>
+                            	<button class="pull-right btn btn-primary">Auto</button>
+                            </div>
+                        </div>
+					</form>
+					<div class="modal-footer">
+						<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Cancel</a>
+						<a href="javascript:;" class="btn btn-sm btn-primary" data-dismiss="modal">Save</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="edit-image-text">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">Edit Image within Text</h4>
+					</div>
+					<div class="alert alert-danger fade in">
+						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+						The Title is required.
+					</div>
+					<form class="form-horizontal form-bordered">
+						<div class="form-group has-feedback">
+							<label class="control-label col-md-4">Title (EN)</label>
+							<div class="col-md-7">
+								<div class="uploadImg">
+									<div class="bg"><img src="images/cms/01.jpg"></div>
+									<div class="editBtn">
+										<strong>430×430</strong>
+										<span class="file_uploadImg"></span>
+										<a href="#image-crop" class="btn btn-inverse btn-block btn-small" data-toggle="modal"><i class="fa fa-crop"></i> 裁切</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+                            <label class="control-label col-md-4">Image Float Direction</label>
+                            <div class="col-md-7">
+                            	<select class="form-control">
+                                    <option>Left</option>
+                                    <option>Right</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Image Description</label>
+                            <div class="col-md-7">
+                            	<textarea class="form-control m-b-10" placeholder="Textarea" rows="3"></textarea>
+                            </div>
+                        </div>
+						<div class="form-group">
+                            <label class="control-label col-md-4">Text</label>
+                            <div class="col-md-7">
+                            	<textarea class="form-control m-b-10" placeholder="Textarea" rows="3"></textarea>
+                            </div>
+                        </div>
+					</form>
+					<div class="modal-footer">
+						<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Cancel</a>
+						<a href="javascript:;" class="btn btn-sm btn-primary" data-dismiss="modal">Save</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="edit-link">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">Edit Link</h4>
+					</div>
+					<div class="alert alert-danger fade in">
+						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+						The Title is required.
+					</div>
+					<form class="form-horizontal form-bordered">
+						<div class="form-group">
+                            <label class="control-label col-md-4">Type</label>
+                            <div class="col-md-7">
+                            	<select class="form-control">
+                            		<option>Regular</option>
+                                    <option>Email</option>
+                                    <option>Document</option>
+                                </select>
+                            </div>
+                        </div>
+						<div class="form-group has-feedback">
+							<label class="control-label col-md-4">Link</label>
+							<div class="col-md-7">
+								<div class="input-group m-b-20">
+	                                <input type="text" class="form-control m-b-10" placeholder="Name" value="Google">
+	                                <input type="text" class="form-control m-b-10" placeholder="address" value="http://www.google.com">
+	                                <div class="tagBox list">
+		                            	<span class="btn btn-primary file_uploadPDF"></span>
+		                            	<div class="progress progress-striped active">
+		                                    <div class="progress-bar" style="width: 80%">Uploading</div>
+		                                </div>
+		                            	<span class="label label-default file">
+		                            		<a class="link" target="_blank" href="http://www.google.com">
+		                                		<i class="fa fa-file-pdf-o"></i>
+		                            		</a>
+		                            		<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280">
+		                            			<i class="fa fa-times"></i>
+		                            		</a>
+		                            	</span>
+		                            </div>
+	                                <button type="button" class="pull-right btn btn-primary">Add</button>
+	                            </div>
+	                            <div class="tagBox list movablePlateY">
+                                	<span class="label label-default">
+                                		<a class="link" target="_blank" href="http://www.google.com">
+                                    		<span>Pariatur itaque delectus autem, deleniti, possimus ex illo repellat consectetur corrupti quas quo debitis ducimus.</span>
+                                		</a>
+                                		<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280">
+                                			<i class="fa fa-times"></i>
+                                		</a>
+                                	</span>
+                                    <span class="label label-default">
+                                		<a class="link" target="_blank" href="http://www.google.com">
+                                    		<span>Pariatur itaque delectus autem, deleniti, possimus ex illo repellat consectetur corrupti quas quo debitis ducimus.</span>
+                                		</a>
+                                		<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280">
+                                			<i class="fa fa-times"></i>
+                                		</a>
+                                	</span>
+                                	<span class="label label-default">
+                                		<a class="link" target="_blank" href="http://www.google.com">
+                                    		<span>Pariatur itaque delectus autem, deleniti, possimus ex illo repellat consectetur corrupti quas quo debitis ducimus.</span>
+                                		</a>
+                                		<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="tag-remove" data-original-title="" title="" aria-describedby="tooltip348280">
+                                			<i class="fa fa-times"></i>
+                                		</a>
+                                	</span>
+                                </div>
+							</div>
+						</div>
+					</form>
+					<div class="modal-footer">
+						<a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Cancel</a>
+						<a href="javascript:;" class="btn btn-sm btn-primary" data-dismiss="modal">Save</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-primary btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/plugins/jquery/jquery-1.9.1.min.js"></script>
+	<script src="assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+	<script src="assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="assets/crossbrowserjs/respond.min.js"></script>
+		<script src="assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/plugins/switchery/switchery.min.js"></script>
+	<script src="assets/js/form-slider-switcher.demo.min.js"></script>
+	<script src="assets/js/jquery.uploadifive.js"></script>
+	<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+	<script src="assets/js/apps.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	
+	<script>
+		$(document).ready(function() {
+			App.init();
+
+			//开关插件
+			FormSliderSwitcher.init();
+
+			//日历选择
+			$('#datepicker-default').datepicker({
+		        todayHighlight: true
+		    });
+
+		    //拖动排序
+			$(".tagBox.movable").sortable({items:".label"});
+			$(".movablePlateY ul").sortable({ items: 'li' , axis: 'y' });
+			$(".sort-gallery").sortable({items:"li", handle:".fa-arrows"});
+			$(".movablePlateY.tagBox").sortable({ items: '.label' , axis: 'y' });
+
+		    //裁图弹出框高度
+			$(window).resize(function(){
+				$('.pop-crop').css({height:$(window).height()-140});
+			}).resize();
+
+		    //上传文件
+			$('.file_uploadImg').uploadifive({
+				'buttonClass'  : 'btn btn-primary btn-block btn-small m-b-5',
+				'width': '',
+				'height': '',
+				'buttonText': '<i class="fa fa-cloud-upload"></i> 上传'
+			});
+
+			// 匹配搜索框
+			$('.searchBox input').focus(function(){
+				$(this).parent('.input-group').siblings('.resultBox').fadeIn();
+				$(this).siblings('.resultBox').fadeIn();
+			})
+			$('.searchBox input').blur(function(){
+				$(this).parent('.input-group').siblings('.resultBox').fadeOut();
+				$(this).siblings('.resultBox').fadeOut();
+			});
+
+			//为下拉框添加打字后搜索的框
+			$('.selectpicker').selectpicker('render');
+
+			//多选服务
+			$(".tagBox .expand").click(function(){
+				if(!$(this).parents(".tagBox").hasClass("load")){
+					$(this).parents(".tagBox").addClass("load");
+					$(this).children("i").removeClass("fa-plus-circle").addClass("fa-minus-circle");
+					$(this).parents(".tagBox").find(".hiding-content").slideDown();
+				}
+				else {
+					$(this).parents(".tagBox").find(".hiding-content").slideUp();
+					$(this).children("i").removeClass("fa-minus-circle").addClass("fa-plus-circle");
+					$(this).parents(".tagBox").removeClass("load");
+				}
+			});
+
+			//幻灯片排序
+			$("#sort-gallery-image").click(function(){
+				if($(this).hasClass("sort")){
+					$("#edit-gallery").removeClass("sort");
+					$(this).removeClass("sort");
+					$(this).html("Sort Image");
+				}
+				else {
+					$("#edit-gallery").addClass("sort");
+					$(this).addClass("sort");
+					$(this).html("Edit Image");
+				}
+			});
+
+			$(".sort .sort-style li .edit").click(function(){
+				$(this).closest("li").addClass("active");
+			});
+
+			$(".sort .sort-style li .info .save, .sort .sort-style li .info .cancel").click(function(){
+				$(this).closest("li").removeClass("active");
+			});
+
+			//上传PDF
+			$('.file_uploadPDF').uploadifive({
+				'buttonClass'  : 'btn btn-primary btn-block btn-small m-b-5',
+				'width': '',
+				'height': '',
+				'buttonText': '<i class="fa fa-cloud-upload"></i> 上传'
+			});
+		});
+	</script>
+</body>
+</html>
